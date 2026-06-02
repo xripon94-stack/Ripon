@@ -1,137 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXTRA-POWER Official | Tournament</title>
-<meta name="description" content="EXTRA-POWER Official Free Fire Tournament Registration Website">
+<title>EXTRA-POWER OFFICIAL</title>
+
 <style>
-body{
-    background:#111;
-    color:white;
-    font-family:Arial,sans-serif;
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:#fff;
 }
 
 header{
-    background:#ff6600;
+    background:linear-gradient(45deg,#ff6a00,#ff0000);
     text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:35px;
+}
+
+.container{
+    width:90%;
+    max-width:800px;
+    margin:auto;
+}
+
+.card{
+    background:#1c1c1c;
+    margin:20px 0;
     padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(255,106,0,0.3);
 }
 
-.hero{
-    text-align:center;
-    padding:40px 20px;
+.card h2{
+    color:#ff6a00;
+    margin-bottom:15px;
 }
 
-.hero h2{
-    color:#ffcc00;
-}
-
-section{
-    padding:20px;
-    text-align:center;
+.prize p{
+    margin:8px 0;
+    font-size:18px;
 }
 
 input{
-    width:90%;
-    max-width:400px;
+    width:100%;
     padding:12px;
     margin:8px 0;
     border:none;
-    border-radius:5px;
+    border-radius:8px;
 }
 
 button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#ff6a00;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff4500;
+}
+
+.channel-btn{
+    display:block;
+    text-align:center;
     background:#25D366;
     color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-h2{
-    color:#ffcc00;
-}
-
-hr{
-    border:1px solid #333;
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    margin-top:20px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>EXTRA-POWER</h1>
-    <p>FREE FIRE TOURNAMENT</p>
+    <h1>⚡ EXTRA-POWER OFFICIAL ⚡</h1>
+    <p>FREE FIRE SQUAD TOURNAMENT</p>
 </header>
 
-<section class="hero">
-    <h2>🏆 Prize Pool ৳120</h2>
-    <p>💰 Entry Fee: ৳15</p>
-</section>
+<div class="container">
 
-<section>
-    <h2>🏆 TOURNAMENT DETAILS</h2>
+    <div class="card">
+        <h2>🏆 Tournament Details</h2>
 
-    <p>🎮 Game: Free Fire</p>
-    <p>💰 Entry Fee: ৳15</p>
-    <p>🏆 Prize Pool: ৳120</p>
+        <p>💰 Entry Fee: <b>25 TK</b></p>
+        <p>👥 Mode: <b>Squad</b></p>
+        <p>🏆 Prize Pool: <b>220 TK</b></p>
 
-    <hr>
+        <div class="prize">
+            <p>🥇 1st Place - 100 TK</p>
+            <p>🥈 2nd Place - 70 TK</p>
+            <p>🥉 3rd Place - 50 TK</p>
+        </div>
+    </div>
 
-    <h2>🥇 PRIZE DISTRIBUTION</h2>
-    <p>🥇 1st Place - ৳60</p>
-    <p>🥈 2nd Place - ৳40</p>
-    <p>🥉 3rd Place - ৳20</p>
+    <div class="card">
+        <h2>📢 WhatsApp Channel</h2>
 
-    <hr>
+        <a class="channel-btn"
+        href="https://whatsapp.com/channel/0029VbCSLyuHltY3cHfWOQ0X"
+        target="_blank">
+        Join WhatsApp Channel
+        </a>
+    </div>
 
-    <h2>📜 RULES</h2>
-    <p>✔ No Hack Allowed</p>
-    <p>✔ Emulator Not Allowed</p>
-    <p>✔ Admin Decision Final</p>
-</section>
+    <div class="card">
+        <h2>📝 Squad Registration</h2>
 
-<section>
-    <h2>📝 Registration</h2>
+        <form onsubmit="sendToWhatsApp(); return false;">
 
-    <form onsubmit="sendWhatsApp(); return false;">
-        <input type="text" id="team" placeholder="Team Name" required><br>
+            <input type="text" id="team"
+            placeholder="Team Name" required>
 
-        <input type="text" id="captain" placeholder="Captain Name" required><br>
+            <input type="text" id="captain"
+            placeholder="Captain Name" required>
 
-        <input type="text" id="uid" placeholder="Free Fire UID" required><br>
+            <input type="text" id="uid"
+            placeholder="Captain UID" required>
 
-        <input type="text" id="phone" placeholder="Phone Number" required><br>
+            <input type="tel" id="mobile"
+            placeholder="Mobile Number" required>
 
-        <button type="submit">Register via WhatsApp</button>
-    </form>
-</section>
+            <button type="submit">
+                Register Now
+            </button>
+
+        </form>
+    </div>
+
+</div>
+
+<footer>
+© 2026 EXTRA-POWER OFFICIAL
+</footer>
 
 <script>
-function sendWhatsApp() {
+function sendToWhatsApp(){
 
-    let team = document.getElementById("team").value;
-    let captain = document.getElementById("captain").value;
-    let uid = document.getElementById("uid").value;
-    let phone = document.getElementById("phone").value;
+let team =
+document.getElementById("team").value;
 
-    let message =
-    "🔥 EXTRA-POWER TOURNAMENT 🔥\n\n" +
-    "Team Name: " + team + "\n" +
-    "Captain Name: " + captain + "\n" +
-    "UID: " + uid + "\n" +
-    "Phone: " + phone;
+let captain =
+document.getElementById("captain").value;
 
-    window.open(
-        "https://wa.me/8801873183803?text=" + encodeURIComponent(message),
-        "_blank"
-    );
+let uid =
+document.getElementById("uid").value;
+
+let mobile =
+document.getElementById("mobile").value;
+
+
+*/
+
+let adminNumber = "8801873183803";
+
+let message =
+`🔥 EXTRA-POWER OFFICIAL 🔥
+
+NEW TOURNAMENT REGISTRATION
+
+Team Name: ${team}
+
+Captain: ${captain}
+
+UID: ${uid}
+
+Mobile: ${mobile}`;
+
+window.open(
+`https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
 }
 </script>
 
