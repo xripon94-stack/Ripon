@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXTRA-POWER Official | Tournament</title>
+<meta name="description" content="EXTRA-POWER Official Free Fire Tournament Registration Website">
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background:#ff6600;
+    text-align:center;
+    padding:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h2{
+    color:#ffcc00;
+}
+
+section{
+    padding:20px;
+    text-align:center;
+}
+
+input{
+    width:90%;
+    max-width:400px;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+h2{
+    color:#ffcc00;
+}
+
+hr{
+    border:1px solid #333;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EXTRA-POWER</h1>
+    <p>FREE FIRE TOURNAMENT</p>
+</header>
+
+<section class="hero">
+    <h2>🏆 Prize Pool ৳120</h2>
+    <p>💰 Entry Fee: ৳15</p>
+</section>
+
+<section>
+    <h2>🏆 TOURNAMENT DETAILS</h2>
+
+    <p>🎮 Game: Free Fire</p>
+    <p>💰 Entry Fee: ৳15</p>
+    <p>🏆 Prize Pool: ৳120</p>
+
+    <hr>
+
+    <h2>🥇 PRIZE DISTRIBUTION</h2>
+    <p>🥇 1st Place - ৳60</p>
+    <p>🥈 2nd Place - ৳40</p>
+    <p>🥉 3rd Place - ৳20</p>
+
+    <hr>
+
+    <h2>📜 RULES</h2>
+    <p>✔ No Hack Allowed</p>
+    <p>✔ Emulator Not Allowed</p>
+    <p>✔ Admin Decision Final</p>
+</section>
+
+<section>
+    <h2>📝 Registration</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+        <input type="text" id="team" placeholder="Team Name" required><br>
+
+        <input type="text" id="captain" placeholder="Captain Name" required><br>
+
+        <input type="text" id="uid" placeholder="Free Fire UID" required><br>
+
+        <input type="text" id="phone" placeholder="Phone Number" required><br>
+
+        <button type="submit">Register via WhatsApp</button>
+    </form>
+</section>
+
+<script>
+function sendWhatsApp() {
+
+    let team = document.getElementById("team").value;
+    let captain = document.getElementById("captain").value;
+    let uid = document.getElementById("uid").value;
+    let phone = document.getElementById("phone").value;
+
+    let message =
+    "🔥 EXTRA-POWER TOURNAMENT 🔥\n\n" +
+    "Team Name: " + team + "\n" +
+    "Captain Name: " + captain + "\n" +
+    "UID: " + uid + "\n" +
+    "Phone: " + phone;
+
+    window.open(
+        "https://wa.me/8801873183803?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>
