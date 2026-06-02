@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,178 +7,219 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:#0f0f0f;
-    color:#fff;
+background:#0a0a0a;
+color:white;
 }
 
 header{
-    background:linear-gradient(45deg,#ff6a00,#ff0000);
-    text-align:center;
-    padding:25px;
+text-align:center;
+padding:30px;
+background:linear-gradient(90deg,#ff0000,#ff6600);
+box-shadow:0 0 20px #ff4500;
 }
 
 header h1{
-    font-size:35px;
+font-size:35px;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
 }
 
 .container{
-    width:90%;
-    max-width:800px;
-    margin:auto;
+width:90%;
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
 .card{
-    background:#1c1c1c;
-    margin:20px 0;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(255,106,0,0.3);
+background:#161616;
+padding:20px;
+margin-top:20px;
+border-radius:15px;
+border:1px solid #ff6600;
+box-shadow:0 0 10px rgba(255,102,0,.4);
 }
 
 .card h2{
-    color:#ff6a00;
-    margin-bottom:15px;
+color:#ff6600;
+margin-bottom:15px;
 }
 
-.prize p{
-    margin:8px 0;
-    font-size:18px;
+.info{
+margin:8px 0;
+font-size:18px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    border:none;
-    border-radius:8px;
+.payment{
+background:#111;
+padding:10px;
+border-radius:10px;
+margin-top:10px;
 }
 
+.channel-btn,
 button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#ff6a00;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#ff4500;
+display:block;
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+text-align:center;
+color:white;
+margin-top:10px;
 }
 
 .channel-btn{
-    display:block;
-    text-align:center;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:12px;
-    border-radius:8px;
-    font-weight:bold;
+background:#25D366;
+}
+
+button{
+background:#ff6600;
+}
+
+button:hover{
+background:#ff4500;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
 }
 
 footer{
-    text-align:center;
-    padding:20px;
-    background:#111;
-    margin-top:20px;
+text-align:center;
+padding:20px;
+margin-top:30px;
+background:#111;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>⚡ EXTRA-POWER OFFICIAL ⚡</h1>
-    <p>FREE FIRE SQUAD TOURNAMENT</p>
+<h1>⚡ EXTRA-POWER OFFICIAL ⚡</h1>
+<p>FREE FIRE SQUAD TOURNAMENT</p>
 </header>
 
 <div class="container">
 
-    <div class="card">
-        <h2>🏆 Tournament Details</h2>
+<div class="card">
+<h2>🏆 Tournament Details</h2>
 
-        <p>💰 Entry Fee: <b>25 TK</b></p>
-        <p>👥 Mode: <b>Squad</b></p>
-        <p>🏆 Prize Pool: <b>220 TK</b></p>
+<p class="info">🎫 Entry Fee: <b>25 TK</b></p>
+<p class="info">👥 Mode: <b>Squad</b></p>
+<p class="info">🏆 Prize Pool: <b>220 TK</b></p>
+<p class="info">📅 Date: <b>Coming Soon</b></p>
 
-        <div class="prize">
-            <p>🥇 1st Place - 100 TK</p>
-            <p>🥈 2nd Place - 70 TK</p>
-            <p>🥉 3rd Place - 50 TK</p>
-        </div>
-    </div>
+<p class="info">🥇 1st Place - 100 TK</p>
+<p class="info">🥈 2nd Place - 70 TK</p>
+<p class="info">🥉 3rd Place - 50 TK</p>
 
-    <div class="card">
-        <h2>📢 WhatsApp Channel</h2>
+</div>
 
-        <a class="channel-btn"
-        href="https://whatsapp.com/channel/0029VbCSLyuHltY3cHfWOQ0X"
-        target="_blank">
-        Join WhatsApp Channel
-        </a>
-    </div>
+<div class="card">
+<h2>💳 Payment Number</h2>
 
-    <div class="card">
-        <h2>📝 Squad Registration</h2>
+<div class="payment">
+📲 BKash: <b>01873183803</b>
+</div>
 
-        <form onsubmit="sendToWhatsApp(); return false;">
+<div class="payment">
+📲 Nagad: <b>01873183803</b>
+</div>
 
-            <input type="text" id="team"
-            placeholder="Team Name" required>
+</div>
 
-            <input type="text" id="captain"
-            placeholder="Captain Name" required>
+<div class="card">
+<h2>📢 WhatsApp Channel</h2>
 
-            <input type="text" id="uid"
-            placeholder="Captain UID" required>
+<a class="channel-btn"
+href="https://whatsapp.com/channel/0029VbCSLyuHltY3cHfWOQ0X"
+target="_blank">
+JOIN WHATSAPP CHANNEL
+</a>
 
-            <input type="tel" id="mobile"
-            placeholder="Mobile Number" required>
+</div>
 
-            <button type="submit">
-                Register Now
-            </button>
+<div class="card">
+<h2>📝 Squad Registration</h2>
 
-        </form>
-    </div>
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text"
+id="team"
+placeholder="Team Name"
+required>
+
+<input type="text"
+id="captain"
+placeholder="Captain Name"
+required>
+
+<input type="text"
+id="uid"
+placeholder="Captain UID"
+required>
+
+<input type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<select id="time">
+<option>7 PM</option>
+<option>8 PM</option>
+<option>9 PM</option>
+<option>10 PM</option>
+</select>
+
+<button type="submit">
+REGISTER NOW
+</button>
+
+</form>
+
+</div>
 
 </div>
 
 <footer>
-© 2026 EXTRA-POWER OFFICIAL
+© EXTRA-POWER OFFICIAL
 </footer>
 
 <script>
 function sendToWhatsApp(){
 
-let team =
-document.getElementById("team").value;
+let team=document.getElementById("team").value;
+let captain=document.getElementById("captain").value;
+let uid=document.getElementById("uid").value;
+let mobile=document.getElementById("mobile").value;
+let time=document.getElementById("time").value;
 
-let captain =
-document.getElementById("captain").value;
+let adminNumber="8801873183803";
 
-let uid =
-document.getElementById("uid").value;
+let message=
+`⚡ EXTRA-POWER OFFICIAL ⚡
 
-let mobile =
-document.getElementById("mobile").value
-
-let adminNumber = "8801873183803";
-
-
-let message =
-`🔥 EXTRA-POWER OFFICIAL 🔥
-
-NEW TOURNAMENT REGISTRATION
+NEW REGISTRATION
 
 Team Name: ${team}
 
@@ -186,7 +227,9 @@ Captain: ${captain}
 
 UID: ${uid}
 
-Mobile: ${mobile}`;
+Mobile: ${mobile}
+
+Match Time: ${time}`;
 
 window.open(
 `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`,
