@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXTRA-POWER Tournament</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+header{
+    background:#ff6600;
+    padding:20px;
+}
+
+.hero{
+    padding:30px;
+}
+
+input{
+    width:90%;
+    max-width:400px;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+h2{
+    color:#ffcc00;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EXTRA-POWER</h1>
+    <p>FREE FIRE TOURNAMENT</p>
+</header>
+
+<section class="hero">
+    <h2>🏆 Prize Pool ৳120</h2>
+    <p>💰 Entry Fee ৳15</p>
+   <h2>🏆 Prize Pool ৳260</h2>
+.   <p>💰 Entry Fee ৳30</p>
+</section>
+
+<section>
+    <h2>📝 Registration</h2>
+
+    <form onsubmit="submitForm(event)">
+        <input type="text" id="team" placeholder="Team Name" required><br>
+
+        <input type="text" id="captain" placeholder="Captain Name" required><br>
+
+        <input type="text" id="uid" placeholder="Free Fire UID" required><br>
+
+        <input type="text" id="phone" placeholder="Phone Number" required><br>
+
+        <button type="submit">Register via WhatsApp</button>
+    </form>
+</section>
+
+<script>
+function submitForm(event){
+    event.preventDefault();
+
+    let team = document.getElementById("team").value;
+    let captain = document.getElementById("captain").value;
+    let uid = document.getElementById("uid").value;
+    let phone = document.getElementById("phone").value;
+
+    let message =
+    "🔥 EXTRA-POWER TOURNAMENT 🔥\n\n" +
+    "Team Name: " + team + "\n" +
+    "Captain Name: " + captain + "\n" +
+    "UID: " + uid + "\n" +
+    "Phone: " + phone;
+
+    window.open(
+        "https://wa.me/8801873183803?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>

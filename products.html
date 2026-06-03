@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Click Game</title>
+
+<style>
+body{
+    text-align:center;
+    font-family:Arial;
+    margin-top:50px;
+}
+
+#box{
+    width:100px;
+    height:100px;
+    background:red;
+    position:absolute;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Score: <span id="score">0</span></h1>
+
+<div id="box" onclick="moveBox()"></div>
+
+<script>
+let score = 0;
+
+function moveBox(){
+    score++;
+    document.getElementById("score").innerText = score;
+
+    let x = Math.random() * (window.innerWidth - 120);
+    let y = Math.random() * (window.innerHeight - 120);
+
+    document.getElementById("box").style.left = x + "px";
+    document.getElementById("box").style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
